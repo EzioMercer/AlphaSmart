@@ -25,7 +25,6 @@ const tabsToTrackingElementsMap = new Map<Tabs, TrackingElementType>([
 	],
 	templateUrl: './left-menu.component.html',
 	styleUrl: './left-menu.component.scss',
-	encapsulation:  ViewEncapsulation.Emulated
 })
 export class LeftMenuComponent {
 	selectedTab = signal(Tabs.None);

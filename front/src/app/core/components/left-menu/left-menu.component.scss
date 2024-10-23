@@ -1,4 +1,4 @@
-$box-shadow: 6px 0 18px 0 rgba(0, 0, 0, 0.06);
+@import '../../../shared/shared-styles';
 
 :host {
 	display: flex;
@@ -14,7 +14,7 @@ $box-shadow: 6px 0 18px 0 rgba(0, 0, 0, 0.06);
 
 	background-color: var(--light-100);
 
-	box-shadow: $box-shadow;
+	box-shadow: $left-menu-box-shadow;
 
 	:nth-child(4) {
 		margin-top: auto;
@@ -30,9 +30,6 @@ $box-shadow: 6px 0 18px 0 rgba(0, 0, 0, 0.06);
 		--switch-position: 5%;
 		--hover-bg: linear-gradient(90deg, var(--primary-lightblue) var(--switch-position), var(--primary-extralight) var(--switch-position));
 		--selected-bg: linear-gradient(90deg, var(--primary-lightblue) var(--switch-position), var(--primary-deepblue) var(--switch-position));
-
-		--hover-bg-2: linear-gradient(90deg, rgba(51, 170, 255, 1) var(--switch-position), rgba(229, 244, 255, 1) var(--switch-position));
-		--selected-bg-2: linear-gradient(90deg, rgba(51, 170, 255, 1) var(--switch-position), rgba(45, 73, 210, 1) var(--switch-position));
 
 		position: relative;
 

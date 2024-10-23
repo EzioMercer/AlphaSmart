@@ -1,4 +1,4 @@
-@import '../../../core/components/left-menu/left-menu.component';
+@import '../../shared-styles';
 
 :host {
 	position: absolute;
@@ -9,7 +9,7 @@
 	height: 100vh;
 	background-color: var(--light-100);
 
-	box-shadow: inset $box-shadow;
+	box-shadow: inset $left-menu-box-shadow;
 
 	.header {
 		display: flex;

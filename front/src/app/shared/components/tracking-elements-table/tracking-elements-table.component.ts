@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { TRACKING_ELEMENTS_NAMES_MAP, TrackingElement, TrackingElementType } from '../../constants';
 import TrackingService from '../../../core/services/tracking.service';
 
