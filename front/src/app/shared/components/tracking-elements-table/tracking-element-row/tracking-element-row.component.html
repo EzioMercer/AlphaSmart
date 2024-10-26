@@ -1,0 +1,26 @@
+<!--(click)="clickOnRow($event)"-->
+
+<ng-container>
+	<td>
+		<input type="checkbox" >
+	</td>
+	<td>
+		<span [class]="'battery-' + (trackingElement.energyLevel === EnergyLevel.Full ? 3 : 2)"></span>
+	</td>
+	<td>
+		<span class="id">{{trackingElement.id}}</span>
+	</td>
+	<td>
+		{{trackingElement.name}}
+	</td>
+	<td>
+		{{trackingElement.workPlace}}
+	</td>
+	<td>
+		{{trackingElement.strongestNode}}
+	</td>
+	<td>
+		{{trackingElement.timestamp}}
+	</td>
+	<td></td>
+</ng-container>

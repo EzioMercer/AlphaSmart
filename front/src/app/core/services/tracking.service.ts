@@ -13,7 +13,8 @@ class TrackingService {
 			name: 'Новиков М. К.',
 			workPlace: 'Сбойка-1',
 			strongestNode: 'А1-23415',
-			timestamp: '20.12.2020 10:45:00'
+			timestamp: '20.12.2020 10:45:00',
+			selected: false
 		},
 		{
 			type: TrackingElementType.Staff,
@@ -22,7 +23,8 @@ class TrackingService {
 			name: 'Васильев Г. Д.',
 			workPlace: 'Вентиляционный штрек',
 			strongestNode: 'А1-23416',
-			timestamp: '20.12.2020 10:46:30'
+			timestamp: '20.12.2020 10:46:30',
+			selected: false
 		},
 		{
 			type: TrackingElementType.Machinery,
@@ -31,7 +33,8 @@ class TrackingService {
 			name: 'DZ-1800',
 			workPlace: 'Сбойка-1',
 			strongestNode: 'А1-23415',
-			timestamp: '20.12.2020 10:45:00'
+			timestamp: '20.12.2020 10:45:00',
+			selected: false
 		},
 		{
 			type: TrackingElementType.Machinery,
@@ -40,9 +43,18 @@ class TrackingService {
 			name: '2АМ8Д',
 			workPlace: 'Вентиляционный штрек',
 			strongestNode: 'А1-23416',
-			timestamp: '20.12.2020 10:46:30'
+			timestamp: '20.12.2020 10:46:30',
+			selected: false
 		}
 	];
+
+	toggleTrackingElementSelection(trackingElement: TrackingElement) {
+		trackingElement.selected = !trackingElement.selected;
+	}
+
+	setTrackingElementSelection(trackingElement: TrackingElement, selected: boolean) {
+		trackingElement.selected = selected;
+	}
 }
 
 export default TrackingService;

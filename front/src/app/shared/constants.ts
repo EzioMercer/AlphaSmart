@@ -10,7 +10,8 @@ export type TrackingElement = {
 	name: string,
 	workPlace: string,
 	strongestNode: string,
-	timestamp: string
+	timestamp: string,
+	selected: boolean
 }
 
 export enum TrackingElementType {

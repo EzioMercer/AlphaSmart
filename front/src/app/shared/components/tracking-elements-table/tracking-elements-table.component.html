@@ -1,7 +1,7 @@
 <div class="header">
 	<div class="name-and-count">
-		<span class="name">{{trackingElementsName}}</span>
-		<span class="count">{{trackingElementsCount}}</span>
+		<span class="name">{{ trackingElementsName }}</span>
+		<span class="count">{{ trackingElementsCount }}</span>
 	</div>
 
 	<div class="actions">
@@ -13,8 +13,63 @@
 
 <div class="table">
 	<table>
-		<tr>
-
-		</tr>
+		<colgroup>
+			<col span="3">
+			<col class="name-column">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>
+					<input type="checkbox" (click)="toggleAllSelection($event)" [checked]="areAllSelected()">
+				</th>
+				<th>
+					<div class="column-with-arrow">
+						<span class="battery"></span>
+						<div class="arrow"></div>
+					</div>
+				</th>
+				@for (columnName of columnsHeadingsNames; track $index) {
+					<th>
+						<div class="column-with-arrow">
+							<span class="name">{{ columnName }}</span>
+							<div class="arrow"></div>
+						</div>
+					</th>
+				}
+				<th>
+					<button class="more"></button>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="vertical-spacing"></tr>
+			@for (trackingElement of trackingElements; track $index) {
+				<tr (click)="trackingElementsService.toggleTrackingElementSelection(trackingElement)">
+					<td>
+						<input type="checkbox" [checked]="trackingElement.selected">
+					</td>
+					<td>
+						<span [class]="'battery-' + (trackingElement.energyLevel === EnergyLevel.Full ? 3 : 2)"></span>
+					</td>
+					<td>
+						<span class="id">{{trackingElement.id}}</span>
+					</td>
+					<td>
+						{{trackingElement.name}}
+					</td>
+					<td>
+						{{trackingElement.workPlace}}
+					</td>
+					<td>
+						{{trackingElement.strongestNode}}
+					</td>
+					<td>
+						{{trackingElement.timestamp}}
+					</td>
+					<td></td>
+				</tr>
+				<tr class="vertical-spacing"></tr>
+			}
+		</tbody>
 	</table>
 </div>
